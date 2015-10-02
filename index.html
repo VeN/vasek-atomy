@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="./script.js"></script>
+
+	<style type="text/css">
+		td {
+			border: 1px solid black;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+
+	<table></table>
+
+	<script>
+		var size = 3;
+		var table = document.querySelector("table");
+		console.log(table);
+
+
+		for (var i = 0 ; i < size ; i++) {
+			var row = document.createElement("tr");
+			table.appendChild(row);
+
+			for (var j = 0; j < size; j++) {
+				var cell = document.createElement("td");
+				row.appendChild(cell);
+			};
+
+		}
+
+
+	</script>
+
+</body>
+</html>
