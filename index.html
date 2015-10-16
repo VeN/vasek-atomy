@@ -9,35 +9,12 @@
 <body>
 
 	<table></table>
-	<script src="./js/draw.js"></script>
 	<script src="./js/board.js"></script>
+	<script src="./js/draw.js"></script>
 	<script src="./js/player.js"></script>
 	<script src="./js/game.js"></script>
 	<script>
-		var size = 6;
-		var table = document.querySelector("table");
-		console.log([]);
-
-
-		for (var i = 0 ; i < size ; i++) {
-			var row = document.createElement("tr");
-			table.appendChild(row);
-
-			for (var j = 0; j < size; j++) {
-				var cell = document.createElement("td");
-				row.appendChild(cell);
-			};
-		}
-
-		document.addEventListener("click", function(e) {
-			var node = e.target;
-			if (node.nodeName == "TD") { update(node); }
-		});
-
-		var update = function(cell) {
-			cell.innerHTML += "0";
-		}
-
+		Game.start();
 	</script>
 
 </body>

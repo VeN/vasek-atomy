@@ -4,7 +4,7 @@ Player.listen = function() {
 	document.body.addEventListener("click", Player.click);
 };
 
-Player.click = funciton(e) {
+Player.click = function(e) {
 	var position = Draw.getPosition(e.target);
 	if (!position) {
 		return
@@ -16,3 +16,4 @@ Player.click = funciton(e) {
 	Board[x][y]++;
 	Draw.all();
 };
+
