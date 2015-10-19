@@ -1,4 +1,26 @@
-var Draw = {};
+var Draw = {
+	CELL: 60,
+	LINE: 2,
+	ATOM: 7,
+	_context: null
+};
+
+Draw.init = function(){
+	var canvas = document.createElement("canvas");
+
+	this.CELL += this.LINE;
+
+	var size = Game.SIZE * this.CELL + this.LINE;
+	canvas.width = size;
+	canvas.height = size;
+
+	this._context = canvas.getContext("2d")
+	this._context.lineWidth = this.LINE;
+
+	document.body.appendChild(canvas);
+
+	this.all();
+};
 
 Draw.all = function(){
 	var html = "<table>";
